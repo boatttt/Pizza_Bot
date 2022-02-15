@@ -1,6 +1,9 @@
 import random
 from random import randint
 
+ #List of names
+names = ["Naomi", "Mio", "Rosmarie", "Kyle", "Dominicus", "Reigo", "Sheryl", "Lykke", "Hamid", "Sean"]
+
 def welcome():
 
     '''
@@ -8,8 +11,7 @@ def welcome():
     Parameters: None
     Returns: None 
     '''
-    #List of names
-    names = ["Naomi", "Mio", "Rosmarie", "Kyle", "Dominicus", "Reigo", "Sheryl", "Lykke", "Hamid", "Sean"]
+   
 
     num = randint(0,9)
 
