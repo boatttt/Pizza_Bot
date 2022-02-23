@@ -2,8 +2,7 @@
 #Accepts blank input 
 
 print('Please enter the pickup information')
-
-#Custome name
+#Customer name
 name = input('What is your name? ')
 
 #Phone number
