@@ -10,10 +10,7 @@ def not_blank(question):
         else: 
             print('This cannot be left blank')
 
-
-
-
-#Basic instructions
+#Basic Instructions
 question = ('Please enter your name ')
 customer_details['name'] = not_blank(question )
 print(customer_details['name'])

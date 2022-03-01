@@ -4,8 +4,20 @@ from random import randint
 
 #List of names
 names = ["Naomi", "Mio", "Rosmarie", "Kyle", "Dominicus", "Reigo", "Sheryl", "Lykke", "Hamid", "Sean"]
+#Customer details dictionary
+customer_details = {}
 
-# Welcome message with random name
+#Validates inputs to see if they are blank
+def not_blank(question):
+    valid = False
+    while not valid:
+        response = input(question)
+        if response != '':
+            return response.title()
+        else: 
+            print('This cannot be left blank')
+
+
 def welcome():
 
     '''
@@ -27,7 +39,7 @@ def welcome():
 
 # Menu for pickup or delivery 
 
-def pickup():
+def order_type():
     print ("Do you want your order delivered or are you picking it up?")
 
     print ("For pickup, enter 1.")
@@ -39,6 +51,7 @@ def pickup():
             if delivery >= 1 and delivery <= 2:
                 if delivery == 1:
                     print ('Pickup')
+                    pickup()
                     break
 
                 elif delivery == 2:
@@ -55,6 +68,16 @@ def pickup():
 
 
 # Pick up information: name and phone
+def pickup():
+    question = ('Please enter your name ')
+    customer_details['name'] = not_blank(question )
+    #print(customer_details['name'])
+
+
+    question = ('Please enter your phone number ')
+    customer_details['phone'] = not_blank(question )
+    #print(customer_details['phone'])
+    print(customer_details)
 
 
 
@@ -97,3 +120,15 @@ def pickup():
 
 
 # Main function
+def main():
+    '''
+    Purpose: To run all functions
+    a welcome message
+    Parameters: None    
+    Returns: None
+    '''
+    welcome()
+    order_type()
+    pickup()
+
+main()
