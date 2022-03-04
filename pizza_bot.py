@@ -1,4 +1,7 @@
 # pizza bot program
+#Bugs - Name allows numbers
+#     - Phone number allows letters
+#2/3/2022
 import random
 from random import randint
 
